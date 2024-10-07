@@ -4,19 +4,19 @@ describe "temperature conversion functions" do
 
   describe "#ftoc" do
 
-    it "converts freezing temperature" do
+    it "converts freezing temperature" do   #convertit la température de congélation
       expect(ftoc(32)).to eq(0)
     end
 
-    it "converts boiling temperature" do
+    it "converts boiling temperature" do    #convertit la température d'ébullition
       expect(ftoc(212)).to eq(100)
     end
 
-    it "converts body temperature" do
+    it "converts body temperature" do       #convertit la température corporelle
       expect(ftoc(98.6)).to eq(37)
     end
 
-    it "converts arbitrary temperature" do
+    it "converts arbitrary temperature" do  #convertit la température arbitraire
       expect(ftoc(68)).to eq(20)
     end
 
@@ -24,19 +24,19 @@ describe "temperature conversion functions" do
 
   describe "#ctof" do
 
-    it "converts freezing temperature" do
+    it "converts freezing temperature" do            #convertit la température de congélation
       expect(ctof(0)).to eq(32)
     end
 
-    it "converts boiling temperature" do
+    it "converts boiling temperature" do             #convertit la température d'ébullition
       expect(ctof(100)).to eq(212)
     end
 
-    it "converts arbitrary temperature" do
+    it "converts arbitrary temperature" do           #convertit la température arbitraire
       expect(ctof(20)).to eq(68)
     end
 
-    it "converts body temperature" do
+    it "converts body temperature" do                #convertit la température corporelle
       expect(ctof(37)).to be_within(0.1).of(98.6)
       # Why do we need to use be_within?
       # See http://www.ruby-forum.com/topic/169330

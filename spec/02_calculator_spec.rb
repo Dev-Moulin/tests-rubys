@@ -47,23 +47,41 @@ describe "#multiply" do
     expect(multiply(3, 4)).to eq(12)
   end
 
-  it "multiplies two other numbers"
-    # one other test here, don't forget do end ;)
+  it "multiplies two other numbers" do
+    expect(multiply(3, 6)).to eq(18)
+  end
 
-  it "multiplies two other numbers, one of them being 0"
-    # one last test, with 0 in it
-
+  it "multiplies two other numbers, one of them being 0" do
+    expect(multiply(3, 0)).to eq(0)
+  end
 end
 
 describe "#power" do
-  it "raises one number to the power of another number"
+  it "raises one number to the power of another number" do
+    expect(power(3, 4)).to eq(81)
+  end
 end
 
 # http://en.wikipedia.org/wiki/Factorial
 describe "#factorial" do
-  it "computes the factorial of 0"
-  it "computes the factorial of 1"
-  it "computes the factorial of 2"
-  it "computes the factorial of 5"
-  it "computes the factorial of 10"
+
+  it "computes the factorial of 0" do
+    expect(factorial(0)).to eq(1)
+  end
+
+  it "computes the factorial of 1" do
+    expect(factorial(1)).to eq(1)
+  end
+
+  it "computes the factorial of 2" do
+    expect(factorial(3)).to eq(6)
+  end
+
+  it "computes the factorial of 5" do 
+    expect(factorial(4)).to eq(24)
+  end
+
+  it "computes the factorial of 10" do 
+    expect(factorial(8)).to eq(40320)
+  end
 end
